@@ -313,4 +313,23 @@ public class SimpleController {
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
+    @GetMapping("/combinatorial8")
+    public ResponseEntity<String> combinatorial8(
+            @RequestParam(name = "p1", required = false) Boolean p1,
+            @RequestParam(name = "p2") Boolean p2,
+            @RequestParam(name = "p3",required = false) Boolean p3,
+            @RequestParam(name = "p4") Boolean p4,
+            @RequestParam(name = "p5", required = false) Boolean p5,
+            @RequestParam(name = "p6") String p6,
+            @RequestParam(name = "p7", required = false) String p7,
+            @RequestParam(name = "p8") String p8,
+            @RequestParam(name = "p9",required = false) String p9,
+            @RequestParam(name = "p10") String p10
+    ) {
+
+        String message = "combinatorial8 is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
 }
