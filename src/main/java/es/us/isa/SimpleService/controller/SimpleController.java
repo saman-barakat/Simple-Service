@@ -165,4 +165,72 @@ public class SimpleController {
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
+    @GetMapping("/oneDependencyEnumParams")
+    public ResponseEntity<String> oneDependencyEnumParams(
+            @RequestParam(name = "p1", required = false) Boolean p1,
+            @RequestParam(name = "p2", required = false) String p2,
+            @RequestParam(name = "p3") Integer p3
+    ) {
+
+        String message = "oneDependencyEnumParams is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/oneDependencyArithRelEnumParams")
+    public ResponseEntity<String> oneDependencyArithRelEnumParams(
+            @RequestParam(name = "p3", required = false) Integer p3,
+            @RequestParam(name = "p5") Integer p5
+    ) {
+
+        String message = "oneDependencyArithRelEnumParams is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/oneDependencyComplexEnumParams")
+    public ResponseEntity<String> oneDependencyComplexEnumParams(
+            @RequestParam(name = "p1", required = false) Boolean p1,
+            @RequestParam(name = "p2", required = false) String p2,
+            @RequestParam(name = "p3") Integer p3
+    ) {
+
+        String message = "oneDependencyComplexEnumParams is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/combinatorial1")
+    public ResponseEntity<String> combinatorial1(
+            @RequestParam(name = "p1") String p1,
+            @RequestParam(name = "p2") String p2,
+            @RequestParam(name = "p3") String p3,
+            @RequestParam(name = "p4") String p4,
+            @RequestParam(name = "p5") String p5
+    ) {
+
+        String message = "combinatorial1 is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/combinatorial2")
+    public ResponseEntity<String> oneDependencyComplex(
+            @RequestParam(name = "p1", required = false) Boolean p1,
+            @RequestParam(name = "p2", required = false) Integer p2,
+            @RequestParam(name = "p3", required = false) Integer p3,
+            @RequestParam(name = "p4", required = false) Integer p4,
+            @RequestParam(name = "p5", required = false) Integer p5,
+            @RequestParam(name = "p6", required = false) Boolean p6,
+            @RequestParam(name = "p7", required = false) Integer p7,
+            @RequestParam(name = "p8", required = false) Integer p8,
+            @RequestParam(name = "p9", required = false) Integer p9,
+            @RequestParam(name = "p10", required = false) Integer p10
+    ) {
+
+        String message = "oneDependencyComplex is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
 }
