@@ -36,7 +36,7 @@ public class SimpleController {
     }
 
     @GetMapping("/oneParamString")
-    public ResponseEntity<String> oneParamString(@RequestParam(name = "p1", required = true) String p1) {
+    public ResponseEntity<String> oneParamString(@RequestParam(name = "p1") String p1) {
 
         String message = "oneParamString is called";
         log.info(message);
