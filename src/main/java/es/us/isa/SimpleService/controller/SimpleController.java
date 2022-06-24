@@ -299,4 +299,18 @@ public class SimpleController {
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
+    @GetMapping("/combinatorial7")
+    public ResponseEntity<String> combinatorial7(
+            @RequestParam(name = "p1") String p1,
+            @RequestParam(name = "p2", required = false) String p2,
+            @RequestParam(name = "p3") Integer p3,
+            @RequestParam(name = "p4") Integer p4,
+            @RequestParam(name = "p5", required = false) Integer p5
+    ) {
+
+        String message = "combinatorial7 is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
 }
