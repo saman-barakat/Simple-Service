@@ -215,7 +215,7 @@ public class SimpleController {
     }
 
     @GetMapping("/combinatorial2")
-    public ResponseEntity<String> oneDependencyComplex(
+    public ResponseEntity<String> combinatorial2(
             @RequestParam(name = "p1", required = false) Boolean p1,
             @RequestParam(name = "p2", required = false) Integer p2,
             @RequestParam(name = "p3", required = false) Integer p3,
@@ -228,7 +228,73 @@ public class SimpleController {
             @RequestParam(name = "p10", required = false) Integer p10
     ) {
 
-        String message = "oneDependencyComplex is called";
+        String message = "combinatorial2 is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/combinatorial3")
+    public ResponseEntity<String> combinatorial3(
+            @RequestParam(name = "p1", required = false) Boolean p1,
+            @RequestParam(name = "p2", required = false) String p2,
+            @RequestParam(name = "p3", required = false) Integer p3,
+            @RequestParam(name = "p4", required = false) String p4,
+            @RequestParam(name = "p5", required = false) Integer p5
+    ) {
+
+        String message = "combinatorial3 is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/combinatorial4")
+    public ResponseEntity<String> combinatorial4(
+            @RequestParam(name = "p1", required = false) Integer p1,
+            @RequestParam(name = "p2", required = false) Integer p2,
+            @RequestParam(name = "p3", required = false) Integer p3,
+            @RequestParam(name = "p4", required = false) Integer p4,
+            @RequestParam(name = "p5", required = false) Integer p5,
+            @RequestParam(name = "p6", required = false) String p6,
+            @RequestParam(name = "p7", required = false) String p7,
+            @RequestParam(name = "p8", required = false) String p8,
+            @RequestParam(name = "p9", required = false) String p9,
+            @RequestParam(name = "p10", required = false) String p10
+    ) {
+
+        String message = "combinatorial4 is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/combinatorial5")
+    public ResponseEntity<String> combinatorial5(
+            @RequestParam(name = "p1") Boolean p1,
+            @RequestParam(name = "p2") String p2,
+            @RequestParam(name = "p3") Integer p3,
+            @RequestParam(name = "p4") String p4,
+            @RequestParam(name = "p5") Integer p5,
+            @RequestParam(name = "p6") Boolean p6,
+            @RequestParam(name = "p7") String p7,
+            @RequestParam(name = "p8") String p8,
+            @RequestParam(name = "p9") String p9,
+            @RequestParam(name = "p10") String p10
+    ) {
+
+        String message = "combinatorial5 is called";
+        log.info(message);
+        return new ResponseEntity<>(message, HttpStatus.OK);
+    }
+
+    @GetMapping("/combinatorial6")
+    public ResponseEntity<String> combinatorial6(
+            @RequestParam(name = "p1") String p1,
+            @RequestParam(name = "p2") String p2,
+            @RequestParam(name = "p3") Integer p3,
+            @RequestParam(name = "p4") Integer p4,
+            @RequestParam(name = "p5") Integer p5
+    ) {
+
+        String message = "combinatorial6 is called";
         log.info(message);
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
